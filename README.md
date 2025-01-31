@@ -89,11 +89,10 @@ pip install -r requirements.txt
   - 🔗 [Get Your Google AI Studio API Key](https://aistudio.google.com/app/apikey)  
 Create a .env file in the project directory and add your API key:
 
-   ```commandline
 GOOGLE_API_KEY=your_google_api_key_here
-   ```
+ 
 
-6️⃣ Run the Streamlit App
+5️⃣ Run the Streamlit App
   ```commandline
 streamlit run app.py
    ```
