@@ -51,7 +51,7 @@ def execute_query(question):
         if not result:
             return "No results found for your query."
 
-        finalresult = llm(f"Generate a concise and clear response based on the following answer: '{result}', ensuring it directly addresses the question: '{question}'.")
+        finalresult=llm("frame simple short sentance with following answer:-" + result + " with refernce to the following question:-" + question)
 
 
         return finalresult
