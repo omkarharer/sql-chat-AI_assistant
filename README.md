@@ -1,7 +1,8 @@
 
 # SQL Chat Assistant 🤖
 
-The SQL Chat Assistant is a Streamlit-based web application that allows users to interact with a SQL database using natural language. It uses a Language Learning Model (LLM) to generate SQL queries from user questions, executes them on a SQLite database, and provides the results in a user-friendly format.
+The SQL Chat Assistant is a Streamlit-based web application that allows users to interact with a SQL database using natural language. It uses a Language Learning Model (LLM) to generate SQL queries from user questions, executes them on a SQLite database, and provides the results in a user-friendly format. Checkout the demo using following URL=
+https://sql-chat-aiassistant-omkarharer.streamlit.app/
 
 ## How It Works
 
@@ -108,7 +109,7 @@ Add your API key to Streamlit’s Secrets:
    ```commandline
 GOOGLE_API_KEY=your_google_api_key_here
    ```
-   Share the public URL (e.g., https://sql-chat-assistant.streamlit.app/) with others.
+   Share the public URL (e.g., https://sql-chat-aiassistant-omkarharer.streamlit.app/) with others.
 
 
 ## Known Limitations
