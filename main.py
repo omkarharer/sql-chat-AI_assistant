@@ -1,5 +1,5 @@
 import streamlit as st
-from langchain.llms import GooglePalm
+# from langchain.llms import GooglePalm
 # from secret import palm
 from dotenv import load_dotenv
 from langchain_google_genai import GoogleGenerativeAI
