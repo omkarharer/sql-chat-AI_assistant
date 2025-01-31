@@ -3,3 +3,4 @@ langchain
 langchain-google-genai
 google-generativeai
 sqlalchemy
+python-dotenv
