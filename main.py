@@ -13,7 +13,7 @@ load_dotenv()
 # Fetch API key from environment variable
 google_api = os.getenv("google")
 # Initialize the LLM
-llm = GoogleGenerativeAI(model="gemini-pro", google_api_key=google_api)
+llm = GoogleGenerativeAI(model="gemini-1.5-pro", google_api_key=google_api)
 
 # Database URI
 db_path =  "demodb.db"     #"C:/Users/Omkar/OneDrive/Desktop/SQL_chat_assistant/demodb.db"
@@ -38,7 +38,8 @@ def execute_query(question):
         print(query)
 
         # Clean the query (remove ```sql and extra spaces)
-        cleaned_query = query.strip('```sql\n').strip('\n```')
+        # cleaned_query = query.strip('```sql\n').strip('\n```')
+        cleaned_query = query.split("SQLQuery:")[1].strip()
         # Display the cleaned SQL query in the sidebar
         st.sidebar.write("SQL Query:")
         st.sidebar.code(cleaned_query)
