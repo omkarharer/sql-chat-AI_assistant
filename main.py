@@ -45,6 +45,17 @@ def execute_query(question):
         st.sidebar.code(cleaned_query)
         print(cleaned_query)
 
+        # Normalize the query for validation
+        normalized_query = cleaned_query.strip().lower()
+
+        # Check if the query is a SELECT statement or starts with a CTE (WITH)
+        if not (
+            normalized_query.startswith("select") or
+            normalized_query.startswith("with")
+        ):
+            return "Only SELECT queries (including CTEs) are allowed. This query cannot be executed."
+
+
         # Execute the query
         result = db.run(cleaned_query)
         
