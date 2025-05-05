@@ -1,5 +1,5 @@
 import streamlit as st
-# from langchain.llms import GooglePalm
+from langchain.llms import GooglePalm
 # from secret import palm
 from dotenv import load_dotenv
 from langchain_google_genai import GoogleGenerativeAI
@@ -22,7 +22,7 @@ db_uri = f"sqlite:///{db_path}"
 # Create SQLDatabase instance with sample rows
 db = SQLDatabase.from_uri(
     db_uri,
-    include_tables=['Employees', 'Departments'],  # Include your table names
+    include_tables=['director_mapping', 'movie','ratings','genre','names','role_mapping'],  # Include your table names
     sample_rows_in_table_info=3
 )
 
@@ -63,8 +63,7 @@ def execute_query(question):
         if not result:
             return "No results found for your query."
 
-        finalresult=llm("frame simple short sentance with following answer:-" + result + " with refernce to the following question:-" + question)
-
+        finalresult=llm("frame simple short sentance with following answer:-" + result + " with refernce to thi following question:-" + question)
 
         return finalresult
 
