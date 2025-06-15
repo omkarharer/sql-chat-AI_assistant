@@ -1,7 +1,10 @@
 streamlit
 langchain
-langchain-community
 langchain-google-genai
 google-generativeai
 sqlalchemy
 python-dotenv
+langchain-groq
+langchain-community
+pandas
+matplotlib
